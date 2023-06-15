@@ -3026,9 +3026,9 @@ ul li .date {
 	position: absolute;
 	width: 130px;
 	height: 33px;
-  background-color: #0bceaf;
-  
-	/* background-image: linear-gradient(to right,#7f00ff,#e100ff); */
+  /* background-color: #0bceaf; */
+
+	background-image: linear-gradient(to right,#7f00ff,#e100ff);
 	border-radius: 15px;
 	top: -45px;
 	display: grid;
