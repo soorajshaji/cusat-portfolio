@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <title>Personal Portfolio</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
+        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+        <meta name="developer" content="Md. Siful Islam">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- FAV AND ICONS   -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/apple-icon.png">
+        <link rel="shortcut icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+        <link rel="shortcut icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+        
+        <!-- Google Font-->
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css">
+        <!-- Animate CSS-->
+        <link rel="stylesheet" href="assets/plugins/css/animate.css">
+        <!-- Owl Carousel CSS-->
+        <link rel="stylesheet" href="assets/plugins/css/owl.css">
+        <!-- Fancybox-->
+        <link rel="stylesheet" href="assets/plugins/css/jquery.fancybox.min.css">
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- Colors -->
+        <link rel="alternate stylesheet" href="assets/css/colors/blue.css" title="blue">
+        <link rel="stylesheet" href="assets/css/colors/defauld.css" title="defauld">
+        <link rel="alternate stylesheet" href="assets/css/colors/green.css" title="green">
+        <link rel="alternate stylesheet" href="assets/css/colors/blue-munsell.css" title="blue-munsell">
+        <link rel="alternate stylesheet" href="assets/css/colors/orange.css" title="orange">
+        <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">
+        <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
+        <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <style>
+                        .dark-vertion .mh-skills ul li {
+                background-color: #202026;
+            }
+
+            .dark-vertion .mh-skills ul li h3 {
+                color: #0bceaf;
+            }
+
+            .top-bar{
+                height: 220px;
+                background-color: rgba(0,21,47,0.86);
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+            }
+            .card-guide {
+              width: 100%;
+              height: 60%;
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+              margin: 100px auto;
+              display: flex;
+              flex-direction: left;
+              align-items: center;
+              justify-content: center;
+            }
+      
+            .profile {
+              width: 160px;
+              height: 100%;
+              background-color: #9ac5af;
+              border-radius: 10px 0px 0px 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              
+            }
+            .profile span {
+              position: absolute;
+              bottom: 15%;
+              color: white;
+            }
+            
+            .details {
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              border-radius: 0px 10px 10px 0px;
+              background: linear-gradient(to right, #9ac5af 50%, white 50%);
+              background-size: 200% 100%;
+              background-position: right bottom;
+              transition: all .5s ease-out;
+            }
+            .details h5 {
+              font-size: 30px;
+              font-weight: 600;
+              color: #224c36;
+              margin-top: 20px;
+              transition: all 250ms ease-in;
+            }
+      
+            .details p {
+              font-size: 12px;
+              font-weight: 500;
+              color: #224c36;
+              margin: 0px 5px 0px 5px;
+              margin-top: 20px;
+              transition: all .5s ease-in;
+            }
+            .details .status {
+              position: absolute;
+              right: 5%;
+              bottom: 15%;
+              font-size: 12px;
+              font-weight: 500;
+              color: #224c36;
+              margin: 0px 5px 0px 5px;
+            }
+            .img-res {
+              height: 90px;
+              width: 90px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+            @media screen and (min-width: 993px) and (max-width: 1200px) {
+      
+              .profile span {
+                position: absolute;
+                bottom: 20%;
+              }
+            }
+      
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+              .profile span {
+                position: absolute;
+                bottom: 14%;
+              }
+              .details .status {
+                bottom: 10%
+              }
+              .card-guide {
+                height: 70%;
+              }
+            }
+            @media screen and (max-width: 576px) {
+              .profile span {
+                position: absolute;
+                bottom: 10%;
+              }
+              
+            }
+            .card-guide:hover .details {
+              background-position: left bottom;
+              
+            }
+           
+            .details:hover  h5, .details:hover  p{
+              color: white;
+              transition: all .5s ease-in;
+            }
+      
+            
+          </style>
+
+    </head>
+    <body class="white-vertion black-bg">
+        <!-- Start Loader -->
+        <div class="section-loader">
+            <div class="loader">
+                <div></div>
+                <div></div> 
+            </div>
+        </div>
+        <!-- End Loader -->
+        
+        <!--
+        ===================
+           NAVIGATION
+        ===================
+        -->
+        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav wow fadeInUp" id="mh-header">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#mh-home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#mh-about">About</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                   <a class="nav-link" href="#mh-skills">Skills</a>
+                                </li>                                 -->
+                                <li class="nav-item">
+                                   <a class="nav-link" href="index.html#mh-experience">Experiences</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="publishedPaper.html">Published Paper</a>
+                                </li>       
+                                <li class="nav-item">
+                                    <a class="nav-link" href="workshop.html">Workshops</a>
+                                </li>                              
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#mh-pricing">Pricing</a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#mh-blog">Patents</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <!--
+        ===================
+            HOME 
+        ===================
+        -->
+        <section style="margin-top: 80px;">
+            
+            <div class="top-bar">
+                
+                <h1 style="color: white;text-align: center;">Research Guidance</h1>
+            
+            </div>
+
+        </section>
+        
+        <!--
+        ==================
+            ABOUT
+        =================
+        -->
+
+        
+        <!--
+        ===================
+           PORTFOLIO
+        ===================
+        -->
+        <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card-guide">
+                    <div class="profile">
+                      <img
+                        class="img-res"
+                        src="assets/images/gallery/gallery1.jpg"
+                        alt=""
+                        srcset=""
+                      />
+      
+                      <span>5954</span>
+                    </div>
+                    <div class="details">
+                      <h5>Sowmya M R</h5>
+                      <p>
+                        Predictive Modelling and Analysis of reference
+                        Evapotranspiration using Machine Learning techniques
+                      </p>
+                      <p class="status">Thesis Submitted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-guide">
+                    <div class="profile">
+                        <img
+                          class="img-res"
+                          src="assets/images/gallery/gallery1.jpg"
+                          alt=""
+                          srcset=""
+                        />
+      
+                        <span>5898</span>
+                    </div>
+                    <div class="details">
+                      <h5>Divya D</h5>
+                      <p>Characterizing selected algorithms used for outlier detection and developing improved combinations</p>
+                      <p class="status">Thesis Submitted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>5953</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Sangeetha Chandran</h5>
+                      <p>Handwriting Analysis using MAchine Learning</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                      <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>5961</span>
+      
+                      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Neenu Johnson</h5>
+                      <p>Design and Development of secured, shared and automated platform for crop monitoring</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>5962</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Nismi Mol E A</h5>
+                      <p>Agriculture Knowledge Base Construction</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>6022</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Sreemol R</h5>
+                      <p>Biometric Data Security</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>6038</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Alfin Abraham</h5>
+                      <p>Blockchain based secure framework for trade supply chain and applications in farming</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>6144</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Manoj A M</h5>
+                      <p>Plant Identification using Pattern Matching</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>6621</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Ashik Mabrook K</h5>
+                      <p>Design and Development of Plant Intelligent Protection System for Agriculture</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4">
+      
+                  <div class="card-guide">
+                    <div class="profile">
+      
+                        <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
+      
+                        <span>6844</span>
+      
+      
+                    </div>
+                    <div class="details">
+                      <h5>Arsha J K</h5>
+                      <p>Interdrone communication protocol for Precision Agriculture</p>
+                      <p class="status">Ongoing</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+        
+       
+
+    <!--
+    ==============
+    * JS Files *
+    ==============
+    -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!-- jQuery -->
+    <script src="assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/plugins/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="assets/plugins/js/wow.min.js"></script>
+    <!-- mixin js-->
+    <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
+    <!-- circle progress-->
+    <script src="assets/plugins/js/circle-progress.js"></script>
+    <!-- jquery nav -->
+    <script src="assets/plugins/js/jquery.nav.js"></script>
+    <!-- Fancybox js-->
+    <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- isotope js-->
+    <script src="assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
+    <!-- Map api -->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+    <!-- Custom Scripts-->
+    <script src="assets/js/map-init.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+    
+
+
+</body>
+
+</html>
