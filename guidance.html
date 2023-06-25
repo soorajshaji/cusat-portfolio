@@ -66,7 +66,7 @@
 
     .card-guide {
       width: 100%;
-      height: 60%;
+      height: 67%;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -99,10 +99,12 @@
       width: 100%;
       height: 100%;
       text-align: center;
+      justify-content: center;
       border-radius: 0px 10px 10px 0px;
       background: linear-gradient(to right, #9ac5af 50%, white 50%);
       background-size: 200% 100%;
       background-position: right bottom;
+      border-left:1px solid rgb(4, 167, 4);
       transition: all .5s ease-out;
     }
 
@@ -139,12 +141,21 @@
       object-fit: cover;
       border-radius: 50%;
     }
+    @media screen and (min-width: 1200px) {
+
+      .special {
+        margin-top: 30%;
+      }
+    }
 
     @media screen and (min-width: 993px) and (max-width: 1200px) {
 
       .profile span {
         position: absolute;
         bottom: 20%;
+      }
+      .special {
+        margin-top: 30%;
       }
     }
 
@@ -155,11 +166,14 @@
       }
 
       .details .status {
-        bottom: 10%
+        bottom: 14%
       }
 
       .card-guide {
         height: 70%;
+      }
+      .special {
+        margin-top: 30%;
       }
     }
 
@@ -176,11 +190,14 @@
 
     }
 
-    .details:hover h5,
-    .details:hover p {
+    .card-guide:hover .details h5,
+    .card-guide:hover .details p {
       color: white;
       transition: all .5s ease-in;
     }
+
+
+
   </style>
 
 </head>
@@ -280,15 +297,28 @@
 
               <span>5954</span>
             </div>
-            <div class="details">
+            
+            <div class="details" style="">
               <h5>Sowmya M R</h5>
               <p>
                 Predictive Modelling and Analysis of reference
                 Evapotranspiration using Machine Learning techniques
               </p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr.Sooraj K Ambat Scientist, NPOL</p>
+              <hr>
               <p class="status">Thesis Submitted</p>
+
             </div>
+            <!-- <div class="details-1">
+              <p>Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr.Sooraj K Ambat Scientist, NPOL</p>
+
+            </div> -->
+
           </div>
+
         </div>
         <div class="col-md-4">
           <div class="card-guide">
@@ -300,6 +330,10 @@
             <div class="details">
               <h5>Divya D</h5>
               <p>Characterizing selected algorithms used for outlier detection and developing improved combinations</p>
+              <hr>
+              <p >Main Guide : Dr. M Bhasi, Sr. Professor, SMS, CUSAT</p>
+              <p>Co-Guide : Dr. Santosh Kumar M B</p>
+              <hr>
               <p class="status">Thesis Submitted</p>
             </div>
           </div>
@@ -318,6 +352,10 @@
             <div class="details">
               <h5>Sangeetha Chandran</h5>
               <p>Handwriting Analysis using MAchine Learning</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr.Sreekumar A Professor, DCA, CUSAT</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -338,6 +376,10 @@
             <div class="details">
               <h5>Neenu Johnson</h5>
               <p>Design and Development of secured, shared and automated platform for crop monitoring</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr. Dhannia T , Associate Prof. SOE, CUSAT</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -357,6 +399,9 @@
             <div class="details">
               <h5>Nismi Mol E A</h5>
               <p>Agriculture Knowledge Base Construction</p>
+              <hr class="special">
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -376,6 +421,10 @@
             <div class="details">
               <h5>Sreemol R</h5>
               <p>Biometric Data Security</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr.Sreekumar A Professor,DCA, CUSAT</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -395,6 +444,9 @@
             <div class="details">
               <h5>Alfin Abraham</h5>
               <p>Blockchain based secure framework for trade supply chain and applications in farming</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -413,6 +465,10 @@
             <div class="details">
               <h5>Manoj A M</h5>
               <p>Plant Identification using Pattern Matching</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <p>Co-Guide : Dr. M Bhasi, Sr. Professor, SMS, CUSAT</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -432,6 +488,9 @@
             <div class="details">
               <h5>Ashik Mabrook K</h5>
               <p>Design and Development of Plant Intelligent Protection System for Agriculture</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>
@@ -451,6 +510,9 @@
             <div class="details">
               <h5>Arsha J K</h5>
               <p>Interdrone communication protocol for Precision Agriculture</p>
+              <hr>
+              <p >Main Guide : Dr. Santosh Kumar M B</p>
+              <hr>
               <p class="status">Ongoing</p>
             </div>
           </div>

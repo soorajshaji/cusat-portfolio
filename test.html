@@ -1,320 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css" />
 
-    <style>
-      .card-guide {
-        width: 100%;
-        height: 60%;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin: 100px auto;
-        display: flex;
-        flex-direction: left;
-        align-items: center;
-        justify-content: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css" />
+  <style>
+    .button {
+      background: #3299bb;
+      color: white;
+      font-family: Arial;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      box-shadow: 0px 3px 10px black;
+    }
 
-      .profile {
-        width: 160px;
-        height: 100%;
-        background-color: #9ac5af;
-        border-radius: 10px 0px 0px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-      }
-      .profile span {
-        position: absolute;
-        bottom: 15%;
-        color: white;
-      }
-      
-      .details {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        border-radius: 0px 10px 10px 0px;
-        background: linear-gradient(to right, #9ac5af 50%, white 50%);
-        background-size: 200% 100%;
-        background-position: right bottom;
-        transition: all .5s ease-out;
-      }
-      .details h5 {
-        font-size: 30px;
-        font-weight: 600;
-        color: #224c36;
-        margin-top: 20px;
-      }
+    .button:active {
+      top: 12px;
+      box-shadow: 0px 2px 10px black;
+    }
 
-      .details p {
-        font-size: 12px;
-        font-weight: 500;
-        color: #224c36;
-        margin: 0px 5px 0px 5px;
-        margin-top: 20px;
-      }
-      .details .status {
-        position: absolute;
-        right: 5%;
-        bottom: 15%;
-        font-size: 12px;
-        font-weight: 500;
-        color: #224c36;
-        margin: 0px 5px 0px 5px;
-      }
-      .img-res {
-        height: 90px;
-        width: 90px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-      @media screen and (min-width: 993px) and (max-width: 1200px) {
+    .button:hover {
+      background: #3999ee;
+    }
 
-        .profile span {
-          position: absolute;
-          bottom: 20%;
+    div.video {
+      display: none;
+      position: absolute;
+
+
+    }
+
+    div.video-wrapper {
+      z-index: 1;
+      background: rgba(0, 0, 0, .5);
+      position: absolute;
+      display: none;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <span class='button'>Watch</span>
+  <div class='video-wrapper'>
+    <div class='video'>
+      <iframe id="player" width="$(window).width()" height="315" src="assets/images/awards/video.mp4" frameborder="0"
+        ></iframe>
+    </div>
+  </div>
+
+  <script src="assets/plugins/js/bootstrap.min.js"></script>
+  <script src="assets/plugins/js/jquery.min.js"></script>
+  <script>jQuery.fn.center = function () {
+      this.css("position", "absolute");
+      this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+      this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+      return this;
+    }
+
+
+    $(document).ready(function () {
+
+      $(".video").css({
+        "width": $("#player").css("width"),
+        "height": $("#player").css("height")
+      });
+
+      $(".button").click(function () {
+        $(".video-wrapper").fadeIn('fast', function () {
+          $(".video").fadeIn();
+          $(".video").center();
+        });
+
+      });
+
+      $(".video-wrapper").click(function (e) {
+        if ($(e.target).is(".video-wrapper")) {
+          $(".video").fadeOut(function () {
+            $(".video-wrapper").fadeOut(function () {
+              $(".video, .video-wrapper").css({ 'display': 'none' });
+              var src = $("#player").attr("src");
+              $("#player").attr("src", "");
+              $("#player").attr("src", src);
+            });
+          });
         }
-      }
+      });
 
-      @media screen and (min-width: 768px) and (max-width: 992px) {
-        .profile span {
-          position: absolute;
-          bottom: 14%;
+      $(document).keyup(function (e) {
+        var isShown = $(".video-wrapper").css("display");
+
+        if (isShown !== "none" && e.which == 27) {
+          $(".video-wrapper").click();
         }
-        .details .status {
-          bottom: 10%
-        }
-        .card-guide {
-          height: 70%;
-        }
-      }
-      @media screen and (max-width: 576px) {
-        .profile span {
-          position: absolute;
-          bottom: 10%;
-        }
-        
-      }
-        
-      
-      .card-guide:hover .details {
-        background-position: left bottom;
-        
-      }
-        
 
-      
-    </style>
-  </head>
-  <body>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-guide">
-              <div class="profile">
-                <img
-                  class="img-res"
-                  src="assets/images/gallery/gallery1.jpg"
-                  alt=""
-                  srcset=""
-                />
+      });
 
-                <span>5954</span>
-              </div>
-              <div class="details">
-                <h5>Sowmya M R</h5>
-                <p>
-                  Predictive Modelling and Analysis of reference
-                  Evapotranspiration using Machine Learning techniques
-                </p>
-                <p class="status">Thesis Submitted</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-guide">
-              <div class="profile">
-                  <img
-                    class="img-res"
-                    src="assets/images/gallery/gallery1.jpg"
-                    alt=""
-                    srcset=""
-                  />
+    });</script>
+</body>
 
-                  <span>5898</span>
-              </div>
-              <div class="details">
-                <h5>Divya D</h5>
-                <p>Characterizing selected algorithms used for outlier detection and developing improved combinations</p>
-                <p class="status">Thesis Submitted</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>5953</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Sangeetha Chandran</h5>
-                <p>Handwriting Analysis using MAchine Learning</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-                <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>5961</span>
-
-                
-
-              </div>
-              <div class="details">
-                <h5>Neenu Johnson</h5>
-                <p>Design and Development of secured, shared and automated platform for crop monitoring</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>5962</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Nismi Mol E A</h5>
-                <p>Agriculture Knowledge Base Construction</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>6022</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Sreemol R</h5>
-                <p>Biometric Data Security</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>6038</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Alfin Abraham</h5>
-                <p>Blockchain based secure framework for trade supply chain and applications in farming</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>6144</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Manoj A M</h5>
-                <p>Plant Identification using Pattern Matching</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>6621</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Ashik Mabrook K</h5>
-                <p>Design and Development of Plant Intelligent Protection System for Agriculture</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-md-4">
-
-            <div class="card-guide">
-              <div class="profile">
-
-                  <img class="img-res" src="assets/images/gallery/gallery1.jpg" alt="" srcset="">
-
-                  <span>6844</span>
-
-
-              </div>
-              <div class="details">
-                <h5>Arsha J K</h5>
-                <p>Interdrone communication protocol for Precision Agriculture</p>
-                <p class="status">Ongoing</p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script src="assets/plugins/js/bootstrap.min.js"></script>
-  </body>
 </html>
