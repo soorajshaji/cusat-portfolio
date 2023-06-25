@@ -3004,7 +3004,7 @@ BLOG Pagination
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background-color: #e100ff7a;
+	background-color: #22c1c3;
 	top: 0;
 	display: grid;
 	place-items: center;
@@ -3013,7 +3013,7 @@ BLOG Pagination
 	content: ' ';
 	width: 12px;
 	height: 12px;
-	background-color: #7f00ff;
+	background-color: #fdbb2d;
 	border-radius: 50%;
 }
 ul li:nth-child(odd) .circle {
@@ -3030,7 +3030,7 @@ ul li .date {
 	height: 33px;
   /* background-color: #0bceaf; */
 
-	background-image: linear-gradient(to right,#7f00ff,#e100ff);
+	background: linear-gradient(164deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 	border-radius: 15px;
 	top: -45px;
 	display: grid;
@@ -3055,7 +3055,7 @@ ul li:nth-child(odd) .date {
 }
 ul li .heading {
 	font-size: 17px;
-	color: rgb(91, 14, 216);
+	color: #22c1c3;
 }
 ul li p {
 	font-size: 13px;
